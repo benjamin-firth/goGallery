@@ -26,7 +26,10 @@
 	<button type='button' on:click={findDis}>Find Dis</button>
 	<section>
 		{#each displayedArt.records as artPiece}
+		<div>
 			<p>{artPiece.title}</p>
+			<img src={artPiece.primaryimageurl} />
+		</div>
 		{/each}
 	</section>
 </main>
