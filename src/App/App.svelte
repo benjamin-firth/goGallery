@@ -1,12 +1,31 @@
 <script>
-	import NavBar from '../NavBar/NavBar';
-	import PicContainer from '../PicContainer/PicContainer';
-	import Picture from '../Picture/Picture';
-	let name;
+	import NavBar from '../NavBar/NavBar.svelte';
+	import PicContainer from '../PicContainer/PicContainer.svelte';
+	import Picture from '../Picture/Picture.svelte';
+	let foundStuff;
+
+	const getSomeArtStuff = async () => {
+		let apiKey = '1c274a30-5bfa-11ea-80aa-f5d9d18048cb';
+		let response = await fetch(`https://api.harvardartmuseums.org/object?apikey=1c274a30-5bfa-11ea-80aa-f5d9d18048cb&culture=37527021`);
+		let data = await response.json();
+		foundStuff = data;
+	};
+
+	const findDis = () => {
+		console.log('firing');
+		console.log(foundStuff);
+	}
+
+
+
+	// =${this.cultureIDs[clickedCulture]}
+	// 37527021
 </script>
 
 <main>
 	<NavBar />
+	<button type='button' on:click={getSomeArtStuff}>Fetch Dis</button>
+	<button type='button' on:click={findDis}>Find Dis</button>
 </main>
 
 <style>
@@ -22,6 +41,10 @@
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
+	}
+
+	button {
+		cursor: pointer;
 	}
 
 	@media (min-width: 640px) {
