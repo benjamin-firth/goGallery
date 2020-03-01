@@ -2,21 +2,19 @@
 	import NavBar from '../NavBar/NavBar.svelte';
 	import PicContainer from '../PicContainer/PicContainer.svelte';
 	import Picture from '../Picture/Picture.svelte';
-	let foundStuff;
+	let displayedArt = {records: []};
 
 	const getSomeArtStuff = async () => {
 		let apiKey = '1c274a30-5bfa-11ea-80aa-f5d9d18048cb';
 		let response = await fetch(`https://api.harvardartmuseums.org/object?apikey=1c274a30-5bfa-11ea-80aa-f5d9d18048cb&culture=37527021`);
 		let data = await response.json();
-		foundStuff = data;
+		displayedArt = data;
 	};
 
 	const findDis = () => {
 		console.log('firing');
-		console.log(foundStuff);
-	}
-
-
+		console.log(displayedArt);
+	};
 
 	// =${this.cultureIDs[clickedCulture]}
 	// 37527021
@@ -26,6 +24,11 @@
 	<NavBar />
 	<button type='button' on:click={getSomeArtStuff}>Fetch Dis</button>
 	<button type='button' on:click={findDis}>Find Dis</button>
+	<section>
+		{#each displayedArt.records as artPiece}
+			<p>{artPiece.title}</p>
+		{/each}
+	</section>
 </main>
 
 <style>
