@@ -24,12 +24,9 @@
 	<NavBar />
 	<button type='button' on:click={getSomeArtStuff}>Fetch Dis</button>
 	<button type='button' on:click={findDis}>Find Dis</button>
-	<section>
+	<section class='art-container'>
 		{#each displayedArt.records as artPiece}
-		<div>
-			<p>{artPiece.title}</p>
-			<img src={artPiece.primaryimageurl} />
-		</div>
+		<Picture title={artPiece.title} img={artPiece.primaryimageurl}/>
 		{/each}
 	</section>
 </main>
@@ -51,6 +48,16 @@
 
 	button {
 		cursor: pointer;
+	}
+
+	img {
+		width: 300px;
+	}
+
+	.art-container {
+		display: flex;
+		overflow: auto;
+  	white-space: nowrap;
 	}
 
 	@media (min-width: 640px) {
