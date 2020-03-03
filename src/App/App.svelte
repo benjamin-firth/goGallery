@@ -1,6 +1,7 @@
 <script>
 	import { displayedArt } from '../stores.js';
 	import NavBar from '../NavBar/NavBar.svelte';
+	import Splash from '../Splash/Splash.svelte';
 	import PicContainer from '../PicContainer/PicContainer.svelte';
 	import Picture from '../Picture/Picture.svelte';
 	let shownWork;
@@ -12,18 +13,22 @@
 
 <main>
 	<NavBar />
-	<section class='art-container'>
-		{#if shownWork.length}
-			{#each shownWork as artPiece}
-			<Picture 
-				title={artPiece.title} 
-				img={artPiece.primaryimageurl} 
-				century={artPiece.century}/>
-			{/each}
-		{:else}
-			<h3>This culture doesn't currently have any pieces.  Please select another.</h3>
-		{/if}
-	</section>
+	{#if shownWork[0].title.length === 0}
+		<Splash />
+	{:else}
+		<section class='art-container'>
+			{#if shownWork.length}
+				{#each shownWork as artPiece}
+				<Picture 
+					title={artPiece.title} 
+					img={artPiece.primaryimageurl} 
+					century={artPiece.century}/>
+				{/each}
+			{:else}
+				<h3>This culture doesn't currently have any pieces.  Please select another.</h3>
+			{/if}
+		</section>
+	{/if}
 </main>
 
 <style>
