@@ -25,8 +25,8 @@
 
 <style>
 	main {
+		height: 100vh;
 		text-align: center;
-		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
 	}
@@ -48,8 +48,7 @@
 
 	.art-container {
 		display: flex;
-		overflow: auto;
-  	white-space: nowrap;
+		overflow: auto; 
 	}
 
 	#blockColorblindContent {
