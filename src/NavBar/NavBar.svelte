@@ -42,8 +42,19 @@
 </section>
 
 <style>
+  section {
+    background-color: #1A9880;
+    padding: 4px;
+  }
+
   button {
 		cursor: pointer;
 	}
+
+  h1 {
+    color: #052429;
+    font-size: 40px;
+    margin: 0px 0px 15px 0px;
+  }
 
 </style>

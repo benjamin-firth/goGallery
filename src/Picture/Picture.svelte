@@ -5,7 +5,7 @@
 
 <div>
   <h3>{title}</h3>
-	<img src={img} />
+	<img src={img}/>
 </div>
 
 <style>
