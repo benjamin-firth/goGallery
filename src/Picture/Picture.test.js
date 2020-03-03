@@ -14,4 +14,4 @@ test('shows proper image when rendered', () => {
   const img = document.querySelector('img[src="test-img"]');
   
   expect(img).not.toBeNull();
-})
+});
