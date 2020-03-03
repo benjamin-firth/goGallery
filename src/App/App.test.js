@@ -8,6 +8,7 @@ test('shows render App and have proper title when rendered', () => {
   expect(getByText('goGallery')).toBeInTheDocument();
 });
 
+
 // test('shows proper image when rendered', () => {
 //   render(App, { title: 'test title', img: 'test-img' });
 
