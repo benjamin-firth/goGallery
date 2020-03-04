@@ -1,6 +1,6 @@
 # goGallery
 
-## Welcome Ben's 'goGallery' art gallery app!
+## Welcome to Ben's 'goGallery' art gallery app!
 
 [Ben Firth](https://github.com/benjamin-firth)
 
