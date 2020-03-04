@@ -31,6 +31,7 @@ This project was a learning experience to gain more confidence in Svelte. I woul
 
 1. Implementing full testing coverage (and seeing what the coverage actually is, since it's difficult to access .svelte files).
 2. Styling with Svelte components.
+3. Creating a .env file to hide the API key.
 
 ### ScreenShots
 #### Welcome Page
