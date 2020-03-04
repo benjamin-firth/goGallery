@@ -1,20 +1,20 @@
 <script>
   import { onMount } from 'svelte';
   import { displayedArt, cultureID, isLoading, startApp } from '../stores.js';
+  import { apiKey } from '../../apiKeys.js';
 
   onMount(async () => {
-		let response = await fetch(`https://api.harvardartmuseums.org/culture?apikey=1c274a30-5bfa-11ea-80aa-f5d9d18048cb`);
+		let response = await fetch(`https://api.harvardartmuseums.org/culture?apikey=${apiKey}`);
     let cultureData = await response.json();
     cultureID.set(cultureData.records);
 	});
 
   const getSomeArtStuff = async (cultureID) => {
-    let apiKey = '1c274a30-5bfa-11ea-80aa-f5d9d18048cb';
     startApp.set(false);
     isLoading.set(true);
     
     try {
-      let response = await fetch(`https://api.harvardartmuseums.org/object?apikey=1c274a30-5bfa-11ea-80aa-f5d9d18048cb&culture=${cultureID}`);
+      let response = await fetch(`https://api.harvardartmuseums.org/object?apikey=${apiKey}&culture=${cultureID}`);
       let data = await response.json();
       displayedArt.set(data.records);
     } catch (error) {
