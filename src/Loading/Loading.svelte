@@ -4,11 +4,11 @@
 
 <section>
   <div>
-    <h1>LOADING...</h1>
     <div class="spinner-box">
       <div class="leo-border-1">
         <div class="leo-core-1"></div>
       </div> 
+      <h1>LOADING...</h1>
       <div class="leo-border-2">
         <div class="leo-core-2"></div>
       </div> 
@@ -25,11 +25,17 @@
   }
 
   div {
-    background-color: #AEE5D8;
+    align-items: center;
     border-radius: 10px;
     color: #042428;
+    display: flex;
+    flex-direction: column;
     padding: 30px 50px 40px 50px;
     width: 500px;
+  }
+
+  h1 {
+    z-index: 1;
   }
 
   /* KEYFRAMES */
