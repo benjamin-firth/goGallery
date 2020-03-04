@@ -6,6 +6,8 @@
 
 Have you ever wanted to see artwork from different cultures? Look no further!
 
+Hosted at: http://gogallery.surge.sh/
+
 ## This app utilizes:
 - Svelte / Javascript
 - The Harvard Art Museum API
