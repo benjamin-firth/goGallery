@@ -40,4 +40,6 @@ This project was a learning experience to gain more confidence in Svelte. I woul
 #### Art View
 <img width="1440" alt="Screen Shot 2020-03-03 at 8 41 25 PM" src="https://user-images.githubusercontent.com/32349614/75843151-97ff0300-5d8f-11ea-8e2e-ca49838ab4b3.png">
 
+P.S. If you're an avid Svelte user and have any pointers or advice, I'd love to hear from you!
+
 
